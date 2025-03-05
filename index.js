@@ -18,7 +18,19 @@ app.get('/movies', async (req, res) => {
         }
     }
     catch(error){
-        res.status(500).json({error: 'Internal Server error.'})
+        res.status(500).json({error: 'Internal Server error'})
+    }
+})
+
+app.post('/movies', async (req, res) => {
+    const {title, director, genre} = req.body
+    try{
+        const movieData = new Movie({title, director, genre})
+        await movieData.save()
+        res.status(200).json(movieData)
+    }
+    catch(error){
+        res.status(500).json({error: 'Internal Server error'})
     }
 })
 
