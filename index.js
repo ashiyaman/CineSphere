@@ -1,8 +1,12 @@
-const  {initializeDatabase} = require( "./db/db.connection.js")
+const initializeDatabase = require( "./db/db.connection.js")
 const express = require('express')
 const app = express()
+const cors = require('cors')
 
 const Movie = require('./models/movie.models.js')
+
+app.use(cors())
+app.use(express.json())
 
 initializeDatabase()
 
