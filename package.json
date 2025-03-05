@@ -4,7 +4,8 @@
   "description": "CineSphere is a movie-tracking web application that allows users to explore, track, and manage their favorite movies. The app provides features such as movie discovery, reviews, and watchlist management.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
   },
   "keywords": [],
   "author": "",
