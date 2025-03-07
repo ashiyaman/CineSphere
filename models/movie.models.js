@@ -12,6 +12,10 @@ const movieSchema = new mongoose.Schema({
     genre: {
         type: String,
         required: true
+    },
+    posterUrl: {
+        type: String,
+        required: true
     }
 },
     {timestamps: true}
