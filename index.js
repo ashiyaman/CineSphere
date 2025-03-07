@@ -29,7 +29,7 @@ app.get('/movies', async (req, res) => {
 app.post('/movies', async (req, res) => {
     const {title, director, genre} = req.body
     try{
-        const movieData = new Movie({title, director, genre})
+        const movieData = new Movie({title, director, genre, posterUrl})
         await movieData.save()
         res.status(200).json(movieData)
     }
